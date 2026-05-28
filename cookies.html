@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Политика использования cookies — NUTRI TRADE LTD</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<script>
+  (function() {
+    var referrer = document.referrer;
+    var currentHost = window.location.host;
+
+    // 1. Разрешаем локальный просмотр через file:// (двойной клик по файлу на ПК)
+    if (window.location.protocol === 'file:') {
+      console.log('Локальный режим: проверка referrer отключена.');
+      return; 
+    }
+
+    // 2. Если зашли на реальном сервере
+    if (referrer) {
+      // Проверяем, содержит ли реферер имя вашего текущего домена/хоста
+      if (referrer.indexOf(currentHost) !== -1) {
+        // Пользователь пришел с вашего сайта (неважно, с index.html или другой страницы) — пускаем!
+        return;
+      }
+    }
+
+    // 3. Если реферер пустой или чужой — перенаправляем на главную
+    window.location.href = "index.html";
+  })();
+</script>
+<body>
+  <header class="header">
+    <div class="container"><nav class="nav"><a href="index.html" class="nav__logo">NUTRI TRADE</a></nav></div>
+  </header>
+
+  <main class="legal-page">
+    <div class="container">
+      <article class="legal-content">
+        <h1>Политика использования cookies</h1>
+        
+        <h2>1. Что такое cookies</h2>
+        <p>Небольшие текстовые файлы, которые сохраняются на устройстве при посещении веб-сайта.</p>
+        
+        <h2>2. Какие cookies мы используем</h2>
+        <p>2.1. Обязательные технические: необходимы для работы сайта.<br>
+        2.2. Аналитические: Google Analytics(только после согласия).<br>
+        2.3. Маркетинговые: для персонализации рекламы(только после согласия).</p>
+        
+        <h2>3. Правовое основание</h2>
+        <p>Статья 6(1)(a) GDPR, директива ePrivacy.</p>
+        
+        <h2>4. Управление cookies</h2>
+        <p>Через cookie-баннер при первом посещении или настройки браузера.</p>
+        
+        <h2>5. Срок хранения</h2>
+        <p>Сессионные(до закрытия браузера) и постоянные(до истечения срока).</p>
+        
+        <h2>6. Контакты</h2>
+        <p>privacy@nutritrade.example</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__copyright">NUTRI TRADE LTD. © 2026 Все права защищены.</div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  
+</body>
+</html>
